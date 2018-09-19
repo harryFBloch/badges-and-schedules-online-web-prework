@@ -10,7 +10,11 @@ def assign_rooms(array)
 end
 
 def printer(array)
-  puts batch_badge_creator(array)
+  room_assignments = assign_rooms(array)
+  batch_badge_creator(array).each_with_index {|badge, index|
+    puts badge
+    puts room_assignments[index -1]
+  }
   assign_rooms(array).each {|string| puts string}
 end 
 
