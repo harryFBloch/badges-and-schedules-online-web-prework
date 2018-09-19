@@ -9,12 +9,13 @@ def assign_rooms(array)
   return newArray
 end
 
-def printer()
-  
+def printer(array)
+  puts batch_badge_creator(array)
+  assign_rooms(array).each {|string| puts string}
 end 
 
 def batch_badge_creator(array)
   newArray = []
-  array.each {|name| newArray.push(name)}
+  array.each {|name| newArray.push(badge_maker(name))}
   return newArray
 end
